@@ -31,6 +31,16 @@ code {
   opacity: 0;
 }
 
+
+img {
+  -webkit-touch-callout: none; /* Prevent long-press context menu on iOS */
+  -webkit-user-select: none;  /* Prevent text/image selection */
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; /* Prevent selection */
+  pointer-events: auto; /* Allow interactions like clicks or mouse events */
+}
+
 .joystick-button.top {
   transform: translate(-200%);
 }
