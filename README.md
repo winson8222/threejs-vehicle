@@ -72,3 +72,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ## AI used
 Calculating delta change of orbitalControls
 Making the front and back of vehicles different colors
+Calculate camera initial position in ReplayScene

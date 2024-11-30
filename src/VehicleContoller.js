@@ -7,6 +7,8 @@ class VehicleController {
       this._velocity = new THREE.Vector3(0, 0, 0); // Movement vector
       this._lastFireTime = performance.now();
       this._isMoving = false;
+      this._x_axis = new THREE.Vector3(1, 0, 0);
+      this._y_axis = new THREE.Vector3(0, 1, 0);
     }
 
     _fire() {
@@ -63,28 +65,29 @@ class VehicleController {
   
     
       switch (command) {
-        case 'rotateLeft':
-          this._vehicle.rotation.y += Math.PI * deltaTime;
-          break;
-        case 'rotateRight':
-          this._vehicle.rotation.y -= Math.PI * deltaTime; 
-          break;
+          case 'rotateLeft': {
+            const angle = Math.PI * deltaTime; 
+            this._vehicle.rotateOnAxis(this._y_axis, angle);
+            break;
+          }
+          case 'rotateRight': {
+            const angle = -Math.PI * deltaTime; 
+            this._vehicle.rotateOnAxis(this._y_axis, angle);
+            break;
+          }
           case 'rotateUp': {
-            // Rotate around the local X-axis
-            const axis = new THREE.Vector3(1, 0, 0); // Local X-axis
-            const angle = Math.PI * deltaTime; // Rotation angle
-            this._vehicle.rotateOnAxis(axis, angle);
+            const angle = Math.PI * deltaTime; 
+            this._vehicle.rotateOnAxis(this._x_axis, angle);
             break;
           }
           case 'rotateDown': {
-            // Rotate around the local X-axis (negative angle)
-            const axis = new THREE.Vector3(1, 0, 0); // Local X-axis
-            const angle = -Math.PI * deltaTime; // Rotation angle
-            this._vehicle.rotateOnAxis(axis, angle);
+            const angle = -Math.PI * deltaTime;
+            this._vehicle.rotateOnAxis(this._x_axis, angle);
             break;
           }
           case 'fire': {
             this._fire();
+            break;
           }
         default:
           break;

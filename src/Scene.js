@@ -5,6 +5,7 @@ import { useThree } from '@react-three/fiber';
 import ThirdPersonCamera from './ThirdPersonCamera';
 import VehicleController from './VehicleContoller';
 import { OrbitControls } from '@react-three/drei';
+import { createVehicle } from './VehicleModel';
 
 
 function Scene({command , cameraCommand, isCameraFollowing, isVehicleMoving}) {
@@ -59,18 +60,7 @@ function Scene({command , cameraCommand, isCameraFollowing, isVehicleMoving}) {
     useEffect(() => {
       if (!cameraRef.current) return;
 
-      const vehicleGeometry = new THREE.BoxGeometry(1, 1, 2);
-
-      const vehicleMaterials = [
-        new THREE.MeshStandardMaterial({ color: 'blue' }), 
-        new THREE.MeshStandardMaterial({ color: 'blue' }),
-        new THREE.MeshStandardMaterial({ color: 'blue' }), 
-        new THREE.MeshStandardMaterial({ color: 'blue' }), 
-        new THREE.MeshStandardMaterial({ color: 'yellow' }),  
-        new THREE.MeshStandardMaterial({ color: 'red' }),
-      ];
-      
-      const vehicleMesh = new THREE.Mesh(vehicleGeometry, vehicleMaterials);
+      const vehicleMesh = createVehicle()
       vehicleMesh.position.set(0, 0, 0);
       scene.add(vehicleMesh);
       vehicleRef.current = vehicleMesh;
