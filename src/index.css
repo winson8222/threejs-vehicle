@@ -64,7 +64,6 @@ img {
 .control-button {
   position: relative;
   width: 10vw;
-
 }
 
 .control-button-background {
@@ -99,3 +98,27 @@ img {
   gap: 2vw;
   z-index: 1;
 }
+
+
+
+
+
+@media (orientation: portrait) {
+
+  
+  .toggle-buttons-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .joystick {
+    position: absolute;
+    width: 20vw;
+    top: 30%;
+    z-index: 1;
+    margin-left: 5vw;
+  } 
+
+}
+
