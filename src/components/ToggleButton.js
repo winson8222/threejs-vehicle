@@ -14,7 +14,6 @@ function CameraButton({ commandHandler, img, text }) {
                 src={img}
                 className="control-button-background"
                 onClick={handleToggle} 
-                onTouchStart={handleToggle} 
             />
             <div className="control-button-text">
                 {isDefault ? text[0] : text[1]}
