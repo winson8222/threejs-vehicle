@@ -30,7 +30,7 @@ function App() {
       <ControlButton commandHandler={setCommand} command ={'fire'} img='/burn.png' text={"Fire"}/>
         <div className='toggle-buttons-container'>
           <ToggleButton commandHandler={handleMovementToggle} img='/accelerator.png' text={["Stopped", "Moving"]}/>
-          <ToggleButton commandHandler={handleCameraToggle} img='/Camera.png' text={["Camera Following", "Free Camera"]}/>
+          <ToggleButton commandHandler={handleCameraToggle} img='/camera.png' text={["Camera Following", "Free Camera"]}/>
         </div>
       </div>
       <Canvas>
