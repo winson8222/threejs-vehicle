@@ -19,7 +19,6 @@ function Joystick({ commandHandler }) {
                 onTouchStart={() => handleStart('rotateUp')}
                 onTouchEnd={handleEnd}
             >
-                Top
             </button>
             <button
                 className="joystick-button left"
@@ -28,7 +27,6 @@ function Joystick({ commandHandler }) {
                 onTouchStart={() => handleStart('rotateLeft')}
                 onTouchEnd={handleEnd}
             >
-                Left
             </button>
             <button
                 className="joystick-button right"
@@ -37,7 +35,6 @@ function Joystick({ commandHandler }) {
                 onTouchStart={() => handleStart('rotateRight')}
                 onTouchEnd={handleEnd}
             >
-                Right
             </button>
             <button
                 className="joystick-button bottom"
@@ -46,7 +43,6 @@ function Joystick({ commandHandler }) {
                 onTouchStart={() => handleStart('rotateDown')}
                 onTouchEnd={handleEnd}
             >
-                Bottom
             </button>
         </div>
     );
