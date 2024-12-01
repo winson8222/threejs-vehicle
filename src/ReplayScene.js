@@ -60,7 +60,7 @@ function ReplayScene({ history, index }) {
     const pitch = Math.PI / 6; // Tilt angle (30 degrees upward)
     const yaw = Math.PI / 4;   // Rotation angle (45 degrees around)
 
-    // Compute the camera's position based on angles
+
     const distance = 20; // Distance from the target
     const cameraX = firstPosition.x + distance * Math.cos(yaw);
     const cameraY = firstPosition.y + distance * Math.sin(pitch); // Height
@@ -84,7 +84,7 @@ function ReplayScene({ history, index }) {
   return (
     <>
       <ambientLight intensity={0.5} />
-      <gridHelper />
+      {/* <gridHelper /> */}
       <OrbitControls enabled={true} ref={orbitControlsRef}/>
     </>
   );

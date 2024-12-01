@@ -1,75 +1,41 @@
-# Getting Started with Create React App
+## Deployment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Required:
+- Node.js
 
-## Available Scripts
+Deployment tool:
+- Vercel
 
-In the project directory, you can run:
+Step to deploy:
+- Install Vercel on machine (npm install -g vercel)
+- Create a vercel accoutn
+- Install all dependencies of the application (npm install)
+- Build production version of application (npm run build)
 
-### `npm start`
+- run Vercel in command line (vercel)
+- Login in to vercel account
+- Project directory is set under ./underwater-vehicle if you are not already inside
+- Use default project setting (Create React App)
+- Use the URL created to access the application
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Test deployment at (https://test-deployment-3bc5xaunl-winson8222s-projects.vercel.app)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Use Descriptions
 
-### `npm test`
+- Pedal Icon to toggle stop/move of vehicle
+- Joystick to control the rotation of vehicle
+- Camera Icon to toggle FreeCam Movement around the vehicle/ Following the Vehicle in its direction
+- Fire icon to shoot fireball
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Toggle ReplayMode to read from test .bag file (Pending test file)
+- Scroll progress bar to see the location of the vehicle at different point of history
+- Free Camera movement in Replay mode
 
 ## AI used
-Calculating delta change of orbitalControls
 Making the front and back of vehicles different colors
-Calculate camera initial position in ReplayScene
+Calculate camera initial position in 
+Set CSS properties to prevent img from being selected on touch screen mode
+
+## Reference Used
+- Third Person Camera
+https://github.com/simondevyoutube/ThreeJS_Tutorial_ThirdPersonCamera/blob/main/main.js

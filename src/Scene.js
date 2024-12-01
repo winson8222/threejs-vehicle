@@ -152,7 +152,7 @@ function Scene({command , cameraCommand, isCameraFollowing, isVehicleMoving}) {
         <perspectiveCamera ref={cameraRef} makeDefault position={[0, 0, 0]} />
         <ambientLight intensity={0.5} />
         <spotLight position={[10, 20, 10]} angle={0.3} />
-        <gridHelper />
+        {/* <gridHelper /> */}
         <OrbitControls ref={orbitControlsRef} enabled={!isCameraFollowing} />
     </>
   );
